@@ -14,8 +14,6 @@ project 1 - A Random Quote Generator
 ***/
 
 
-
-
 /***
   Create the `getRandomQuote` function to:
    - Create a variable to store a random number 
