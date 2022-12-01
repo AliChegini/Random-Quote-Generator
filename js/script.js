@@ -48,5 +48,4 @@ project 1 - A Random Quote Generator
 
 //document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
-
 // Remember to delete the comments that came with this file, and replace them with your own code comments.
