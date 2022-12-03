@@ -3,24 +3,45 @@ Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
 
+// array to hold quote objects
+let quotes = [
+  {
+    quote: "To live is the rarest thing in the world. Most people exist, that is all.",
+    source: "Oscar Wilde"
+  },
+  {
+    quote: "It is never too late to be what you might have been.",
+    source: "George Eliot",
+    citation: "Whatever",
+    year: 1950
+  },
+  {
+    quote: "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
+    source: "Ralph Waldo Emerson"
+  },
+  {
+    quote: "All the world's a stage, and all the men and women merely players.",
+    source: "William Shakespeare"
+  },
+  {
+    quote: "Don't let your happiness depend on something you may lose.",
+    source: "C.S. Lewis"
+  },
+  {
+    quote: "Amateurs sit and wait for inspiration, the rest of us just get up and go to work.",
+    source: "Stephen King"
+  }
+];
 
-/*** 
-  Create the array of quote objects and name it `quotes`.
-  Add at least five quote objects to the `quotes` array.
-  Give each quote object a `quote` and `source` property.
-  Add the `citation` property to at least one object in the array.
-  Add the `year` property to at least one object in the array.
-  Use console.log() to log your array of quotes to the console.
-***/
 
 
-/***
-  Create the `getRandomQuote` function to:
-   - Create a variable to store a random number 
-   - Cse the random number to `return` a random quote object from the `quotes` array.
-***/
+function getRandomQuote() {
+  let randomNumber = Math.floor( Math.random() * quotes.length );
+  console.log(randomNumber);
+  return quotes[randomNumber];
+}
 
-
+//console.log(getRandomQuote());
 
 
 /***
@@ -36,7 +57,12 @@ project 1 - A Random Quote Generator
    - Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
 
+function printQuote() {
+  let randomQuote = getRandomQuote()
+  let htmlString = "";
+  
 
+}
 
 
 /***
@@ -49,3 +75,5 @@ project 1 - A Random Quote Generator
 //document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
 // Remember to delete the comments that came with this file, and replace them with your own code comments.
+
+//console.log(getRandomQuote(quotes));
