@@ -1,7 +1,3 @@
-/******************************************
-Treehouse FSJS Techdegree:
-project 1 - A Random Quote Generator
-******************************************/
 
 // array to hold quote objects
 let quotes = [
@@ -35,7 +31,6 @@ let quotes = [
 ];
 
 
-
 function getRandomQuote() {
   let randomNumber = Math.floor( Math.random() * quotes.length );
   console.log(randomNumber);
@@ -46,13 +41,21 @@ function getRandomQuote() {
 function printQuote() {
   let randomQuote = getRandomQuote()
   let htmlString = '';
-  htmlString = `
+  if (randomQuote.citation != null && randomQuote.year != null) {
+    htmlString = `
     <p class="quote"> ${randomQuote.quote} </p>
     <p class="source"> ${randomQuote.source}
       <span class="citation"> ${randomQuote.citation} </span>
       <span class="year"> ${randomQuote.year} </span>
     </p>
   `;
+  } else {
+    htmlString = `
+    <p class="quote"> ${randomQuote.quote} </p>
+    <p class="source"> ${randomQuote.source} </p>
+  `;
+  }
+  
   console.log(randomQuote);
   document.getElementById('quote-box').innerHTML = htmlString;
 }
